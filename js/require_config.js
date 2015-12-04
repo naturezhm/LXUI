@@ -2,16 +2,18 @@
  * 全局配置项，指定模块路径
  * baseUrl的优先级:require.config>data-main>html文件路径
  * 如果模块包含如下的字符,不按照baseUrl+paths的方式来寻找模块,而是采用全路径(URL)的方式:
- * 1.如果以".js"结尾
- * 2.如果以"/"开头
- * 3.如果以"http:"或者"https:"开头
+ *   1.如果以".js"结尾
+ *   2.如果以"/"开头
+ *   3.如果以"http:"或者"https:"开头
  */
  var paths = {
   "base" : "common/base",
   "jquery" : "lib/jquery2.min", // 如是IE6则要使用jquery1.min
   "respond" : "lib/respond.min", // bootstrap IE8 支持
   "html5shiv" : "lib/html5shiv.min",// bootstrap IE8 支持
-  "bootstrap" : "lib/bootstrap.min"
+  "bootstrap" : "lib/bootstrap.min",
+  "domReady" : "lib/domReady", // require domready 支持插件
+  "bootbox" : "lib/popup/bootbox.min"
 };
 
 function beforLoadRequire() {
